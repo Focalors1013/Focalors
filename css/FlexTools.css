@@ -1,0 +1,99 @@
+.FlexTools {
+	display: flex;
+}
+
+body.FlexTools {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.FlexTools :is(header, main, footer, div) {
+	display: flex;
+	width: 100%;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.column.left {
+	align-items: flex-start;
+}
+
+.column.right {
+	align-items: flex-end;
+}
+
+.column.top {
+	justify-content: flex-start;
+}
+
+.column.bottom {
+	justify-content: flex-end;
+}
+
+.column.Wcenter {
+	align-items: center;
+}
+
+.column.Hcenter {
+	justify-content: center;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.row.right {
+	justify-content: flex-start;
+}
+
+.row.right {
+	justify-content: flex-end;
+}
+
+.row.top {
+	display: flex;
+	align-items: flex-start;
+}
+
+.row.bottom {
+	align-items: flex-end;
+}
+
+.row.Wcenter {
+	justify-content: center;
+}
+
+.row.Hcenter {
+	align-items: center;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* 支持对子项操作，控制制定子项的左右 */
+:is(.FlexTools, .column, .center, .row)>.item-left {
+    margin: auto;
+    margin-left: 0;
+}
+
+:is(.FlexTools, .column, .center, .row)>.item-right {
+    margin: auto;
+    margin-right: 0;
+}
+
+:is(.FlexTools, .column, .center, .row)>.item-left-10 {
+    margin: auto;
+    margin-left: 10%;
+}
+
+:is(.FlexTools, .column, .center, .row)>.item-right-10 {
+    margin: auto;
+    margin-right: 10%;
+}
